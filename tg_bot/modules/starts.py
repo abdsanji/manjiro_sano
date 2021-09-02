@@ -13,11 +13,11 @@ async def start_command(message: Message):
     user = message.from_user.full_name
     logger.info(f"{user} send /start")
     if message.chat.type == 'private':
-        await message.answer_photo("https://pbs.twimg.com/media/E036-gkXMAUhG3j?format=jpg&name=large",
-                                   caption=f"Hi, {user}. I'm a Telegram bot to manage chats\n"
-                                           f"For all questions: @waydk\n"
+        await message.answer_photo("https://telegra.ph/file/c471cbc5d39229b203aed.jpg",
+                                   caption=f"Hoi, {user}. I'm a Telegram bot to manage and fun
+                                           f"For all questions: https://t.me/animefan_club777\n"
                                            f"<code>Click the buttons below</code> ",
                                    reply_markup=main_markup)
         await db_helpers.add_user(id_user=message.from_user.id, name=user)
     else:
-        await message.answer("Hey, I'm Mikey.")
+        await message.answer("Hey, I'm Sanji.")
